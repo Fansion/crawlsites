@@ -1,0 +1,16 @@
+说明.md
+notes.md
+
+plus.dat
+
+venv/*
+migrations/*
+部署文档.md
+
+crawlsites/config/default.py
+nginx.conf
+crawlsites.conf
+
+fabfile.py
+*.pyc
+crawlsites/controllers/client_secrets.json

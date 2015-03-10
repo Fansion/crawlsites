@@ -1,0 +1,30 @@
+{% extends "layout.html" %}
+{% from "macro/common.html" import field_errors, horizontal_field %}
+
+{% block page_title %}主页{% endblock %}
+{% block page_id %}page-index{% endblock %}
+
+{% block body %}
+    {{ super() }}
+    <legend>
+        所有功能
+    </legend>
+    <h3>
+        <a id='fb-login' href="">
+            授权新用户
+        </a>
+    </h3>
+    <h3>
+        <a id='fb-all-valid-users' href="">所有授权用户</a>
+    </h3>
+    <h3>
+        <a id='fb-add-target-user' href="">
+            添加待同步用户
+        </a>
+    </h3>
+    <h3>
+        <a id='fb-all-target-users' href="">所有待同步用户</a>
+    </h3>
+
+
+{% endblock %}

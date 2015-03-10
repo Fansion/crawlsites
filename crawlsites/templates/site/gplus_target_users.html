@@ -1,0 +1,41 @@
+{% extends "layout.html" %}
+{% from "macro/common.html" import pagination, horizontal_field %}
+
+{% block page_title %}所有待同步用户页{% endblock %}
+{% block page_id %}page-target-users{% endblock %}
+
+{% block body %}
+    {{ super() }}
+    <div class="row">
+        <legend>
+            所有待同步用户
+        </legend>
+        {% if target_users.items %}
+            <table class="table table-bordered">
+                <tr>
+                    <td>ID</td>
+                    <td>名字</td>
+                    <td>URL</td>
+                </tr>
+                {% for user in target_users.items %}
+                    <tr>
+                        <td>
+                            <span class="larger label label-danger">
+                                {{ user.uid }}
+                            </span>
+                        </td>
+                        <td>
+                                {{ user.display_name }}
+                        </td>
+                        <td>
+                                {{ user.url }}
+                        </td>
+                    </tr>
+                {% endfor %}
+            </table>
+        {% else %}
+            <h5 class="table">暂无</h5>
+        {% endif %}
+        {{ pagination(target_users) }}
+    </div>
+{% endblock %}

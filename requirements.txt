@@ -1,0 +1,14 @@
+flask
+Flask-Script
+flask_debugtoolbar
+SQLAlchemy
+Flask-Migrate
+flask-wtf
+requests
+tweepy
+flask-moment
+google-api-python-client
+
+fabric
+gevent
+gunicorn

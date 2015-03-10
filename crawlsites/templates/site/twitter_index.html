@@ -1,0 +1,29 @@
+{% extends "layout.html" %}
+{% from "macro/common.html" import field_errors, horizontal_field %}
+
+{% block page_title %}主页{% endblock %}
+{% block page_id %}page-index{% endblock %}
+
+{% block body %}
+    {{ super() }}
+    <legend>
+        所有功能
+    </legend>
+    <h3>
+        <a id='twitter-login' href="{{ url_for('site.twitter_pre_signin') }}">
+            授权新用户
+        </a>
+    </h3>
+    <h3>
+        <a id='twitter-all-valid-users' href="{{ url_for('site.twitter_authorized_users') }}">所有授权用户</a>
+    </h3>
+    <h3>
+        <a id='twitter-add-target-user' href="{{ url_for('site.twitter_add_users') }}">
+            添加待同步用户
+        </a>
+    </h3>
+    <h3>
+        <a id='twitter-all-target-users' href="{{ url_for('site.twitter_target_users') }}">所有待同步用户</a>
+    </h3>
+
+{% endblock %}
